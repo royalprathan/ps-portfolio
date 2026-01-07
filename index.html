@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probability & Statistics Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --accent:#38bdf8;
+    --bg:#f8fafc;
+    --card:#ffffff;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:#1e293b;
+}
+
+/* Layout */
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:270px;
+    background:linear-gradient(180deg,var(--primary),#020617);
+    color:#fff;
+    padding:30px 20px;
+    position:fixed;
+    height:100vh;
+}
+
+.sidebar h2{
+    text-align:center;
+    font-weight:700;
+}
+
+.sidebar p{
+    text-align:center;
+    font-size:13px;
+    opacity:0.8;
+    margin-bottom:25px;
+}
+
+.sidebar button{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.2);
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar button:hover,
+.sidebar button.active{
+    background:var(--accent);
+    color:#020617;
+    border-color:var(--accent);
+}
+
+/* Main */
+.main{
+    margin-left:270px;
+    padding:40px;
+    width:100%;
+}
+
+.section{
+    display:none;
+    animation:fade 0.4s ease;
+}
+
+.section.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Cards */
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+.card h3{
+    margin-top:0;
+    color:var(--accent);
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    padding:14px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:center;
+}
+
+th{
+    background:#f1f5f9;
+}
+
+/* Progress */
+.progress{
+    background:#e5e7eb;
+    height:12px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#64748b;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+    .main{
+        margin-left:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>P&S Portfolio</h2>
+    <p>2025–2026</p>
+    <button class="active" onclick="openSec('home',this)">Home</button>
+    <button onclick="openSec('about',this)">About</button>
+    <button onclick="openSec('units',this)">Units</button>
+    <button onclick="openSec('lab',this)">Lab</button>
+    <button onclick="openSec('projects',this)">Projects</button>
+    <button onclick="openSec('contact',this)">Contact</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- HOME -->
+<div id="home" class="section active">
+    <div class="card">
+        <h3>Probability & Statistics Portfolio</h3>
+        <p><b>Royal Prarthan G</b></p>
+        <p>BVB KLE Technology Hubli</p>
+        <p>This portfolio presents my academic learning and practical understanding of Probability and Statistics.</p>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <div class="card">
+        <h3>About Me</h3>
+        <p>I am Royal Prarthan G, a student of BVB KLE Technology Hubli. This portfolio reflects my learning in Probability and Statistics during the academic year 2025–2026.</p>
+    </div>
+</div>
+
+<!-- UNITS -->
+<div id="units" class="section">
+    <div class="card">
+        <h3>Unit 1: Introduction to Statistics</h3>
+        <p>Definition, data types, variables, measures of central tendency and dispersion.</p>
+    </div>
+    <div class="card">
+        <h3>Unit 2: Probability</h3>
+        <p>Sample space, conditional probability, Bayes’ theorem.</p>
+    </div>
+    <div class="card">
+        <h3>Unit 3: Random Variables</h3>
+        <p>Discrete and continuous random variables, expectation and variance.</p>
+    </div>
+    <div class="card">
+        <h3>Unit 4: Statistical Distributions</h3>
+        <p>Binomial, Poisson and Normal distributions.</p>
+    </div>
+</div>
+
+<!-- LAB -->
+<div id="lab" class="section">
+    <div class="card">
+        <h3>Laboratory Experiments</h3>
+        <table>
+            <tr><th>Exp No</th><th>Title</th><th>Status</th></tr>
+            <tr><td>01</td><td>Histogram</td><td>Completed</td></tr>
+            <tr><td>02</td><td>Binomial Distribution</td><td>Completed</td></tr>
+            <tr><td>03</td><td>Normal Distribution</td><td>Completed</td></tr>
+            <tr><td>04</td><td>Poisson Distribution</td><td>Completed</td></tr>
+        </table>
+        <p><b>Completion</b></p>
+        <div class="progress"><span style="width:100%"></span></div>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <div class="card">
+        <h3>Mini Projects</h3>
+        <p><b>Marks Analysis:</b> Statistical analysis using mean and standard deviation.</p>
+        <p><b>Probability Simulation:</b> Experimental verification of probability laws.</p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <div class="card">
+        <h3>Contact</h3>
+        <p><b>Name:</b> Royal Prarthan G</p>
+        <p><b>Institution:</b> BVB KLE Technology Hubli</p>
+        <p><b>Academic Year:</b> 2025–2026</p>
+    </div>
+</div>
+
+<div class="footer">
+    © 2025–26 | Probability & Statistics Portfolio
+</div>
+
+</div>
+</div>
+
+<script>
+function openSec(id,btn){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+
+    document.querySelectorAll('.sidebar button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
